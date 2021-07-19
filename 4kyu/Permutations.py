@@ -12,6 +12,7 @@ The order of the permutations doesn't matter.
 from itertools import permutations as pe
 
 def permutations(string):
-    print()
+    # get all permutations
     result = [''.join(p) for p in pe(string)]
+    # remove duplicates
     return list(set(result))
