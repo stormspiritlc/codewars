@@ -15,7 +15,9 @@
 
 # SOLUTION
 def matrix_mult(a, b):
+    # create zeros matrix
     c = [([0]*len(a[0])) for i in range(len(a))]
+    # calculate each value in c matrix
     for m in range(len(c)):
         for n in range(len(c[0])):
             for t in range(len(c[0])):

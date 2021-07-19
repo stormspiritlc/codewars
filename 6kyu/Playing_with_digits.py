@@ -17,5 +17,8 @@
 
 # SOLUTION
 def dig_pow(n, p):
+    # count sum of square of all digits in number
+    # then extract by number
     k = sum([int(str(n)[i])**(p+i) for i in range(len(str(n)))])/n
+    # check if result is integer or not
     return k if int(k) == k else -1
