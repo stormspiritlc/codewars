@@ -1,9 +1,7 @@
-# DESCRIPTION
+'''
+no description
+'''
 
-# no description
 
-
-
-# SOLUTION
 def multiply(a, b):
     return a * b
