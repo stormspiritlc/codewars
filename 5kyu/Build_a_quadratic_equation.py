@@ -34,11 +34,12 @@ def quadratic_builder(expression):
     first_param = '' if (first_param == 1) else '-' if (first_param  == -1) else first_param
     second_param = '' if (second_param == 1) else '-' if (second_param  == -1) else second_param
     # check if a coefficient = 0 then remove both coefficient+variable
+    word = ""
     if first_param != 0:
-        a = f'{first_param}{word}^2'
+        word += f'{first_param}{word}^2'
     if second_param != 0:
-        a += f'+{second_param}{word}'
+        word += f'+{second_param}{word}'
     if third_param != 0:
-        a += f'+{ls_num[1]*ls_num[3]}'
+        word += f'+{ls_num[1]*ls_num[3]}'
     # replace +- by - to have shortest result
-    return a.replace('+-', '-')
+    return word.replace('+-', '-')
