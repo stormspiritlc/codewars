@@ -40,5 +40,3 @@ a = []
 sample = structure(clue)
 num_0 = len(ls)-len(sample)
 
-a += [0]*num_0
-print(a)
