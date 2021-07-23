@@ -26,26 +26,26 @@ mix(s1, s2) --> "=:aaaaaa/2:eeeee/=:fffff/1:tt/2:rr/=:hh"
 '''
 
 
-s1 = "my&friend&Paul has heavy hats! &"
-s2 = "my friend John has many many friends &"
 def mix(s1, s2):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     ls = []
+    # loop for each letter in alphabet
+    # then add substring (1:aaaa) to list
     for i in alphabet:
-        if s1.count(i) > s2.count(i) and s1.count(i) >= 1:
+        # normal cases
+        if s1.count(i) > s2.count(i) and s1.count(i) > 1:
             ls.append(f'1:{i*s1.count(i)}')
-        elif s2.count(i) > s1.count(i) and s2.count(i) >= 1:
+        elif s2.count(i) > s1.count(i) and s2.count(i) > 1:
             ls.append(f'2:{i*s2.count(i)}')
+        # if the maximum is in s1 as well as in s2 and both are > 1
         elif s1.count(i) == s2.count(i) > 1:
             ls.append(f'=:{i*s1.count(i)}')
+        # if the maximum is in s1 as well as in s2 but both are = 1
         elif s1.count(i) == s2.count(i) == 1:
             continue
+    # sort list by s1 and s2 (1 -> 2 -> =)
     ls = sorted(ls, key=lambda x: x[0], reverse=False)
+    # sort list by length of substring
     ls.sort(key=len, reverse=True)
+    # join list
     return '/'.join(ls)
-
-# print(mix(s1, s2))
-ls = ['2:yyyy', '1:ccc', '2:ddd', '1:nnn', '1:sss', '=:aa', '=:zz']
-ls = sorted(ls, key=lambda x: x[0], reverse=False)
-ls.sort(key=len, reverse=True)
-print(ls)
