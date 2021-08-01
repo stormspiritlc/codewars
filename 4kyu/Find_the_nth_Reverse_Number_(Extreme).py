@@ -62,5 +62,5 @@ def find_reverse_number(n):
 # thuật toán là tìm số chữ số k của số thứ n, và vị trí của nó tính từ số palindrome đầu tiên với k chữ số
 # số palindrome thứ n tính từ số palindrome đầu tiên với k chữ số có thể được tính bằng vị trí của nó
 # chẳng hạn n ban đầu là 1001 -> k=5 và n=801 tính từ số palindrome đầu tiên có 5 chữ số (10001)
-# 1 số palindrome 5 chữ số có dạng "xyzyz" với x=8+1, y=0, z=1 theo vị trí của nó
+# 1 số palindrome 5 chữ số có dạng "xyzyx" với x=8+1, y=0, z=1 theo vị trí của nó
 # => số đó là 90109
